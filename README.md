@@ -1,69 +1,74 @@
-# React + TypeScript + Vite
+# 🎸 Online Guitar Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A 3-page guitar shop web application built with **React**, **TypeScript**, **Apollo Client**, and **GraphQL**, based on a Figma design.
 
-Currently, two official plugins are available:
+This project was created for the **Software Engineer Intern Assignment**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📄 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### ✅ Page 1 – Guitar Brands
+- Displays all guitar brands from the GraphQL API.
+- Clicking a brand navigates to the model list page.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### ✅ Page 2 – Guitar Models
+- Shows all models for the selected brand.
+- Includes:
+  - Search bar to filter models by name.
+  - Type filter (Electric, Acoustic, etc.).
+  - **Infinite scroll** (loads more models as you scroll).
+- Clicking a model navigates to the details page.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### ✅ Page 3 – Guitar Details
+- Displayed in two tabs:
+  - **Specs** – Shows guitar specifications.
+  - **Musicians** – Displays musicians using the guitar.
+    - Only 2 musicians shown at a time with "Show More" functionality.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 🌐 Language Support
+- Supports **English**, **Macedonian**, and **Albanian**.
+- Language can be changed from the footer.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Technologies
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **React + Vite**
+- **TypeScript**
+- **Apollo Client**
+- **GraphQL**
+- **React Router**
+- **i18next** (internationalization)
+- **Styled Components**
+- **CSS Modules**
+
+---
+
+## 🔧 Setup Instructions
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Ton4ee/Guitar-Shop.git
+   cd Guitar-Shop
+2. **Install dependencies**
+    ```bash
+   npm install
+3. **Start the development server**
+    ```bash
+   npm run dev
+4. **Open http://localhost:5173 in your browser.**
+
+🔗 API
+GraphQL API used:
+
+https://graphql-api-brown.vercel.app/api/graphql
+
+🎨 Figma Design
+Design reference:
+https://www.figma.com/design/Q9sgkZlKkPIkiX3eRSKCJP/Design-Task?node-id=1-2&p=f&t=bTP28e3rsrbJdjD2-0
+
+👤 Author
+Antonio Puceski
+
+Feel free to reach out if you have any questions. Thank you! 🎸
